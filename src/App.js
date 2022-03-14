@@ -1,11 +1,5 @@
 import "./App.css";
-
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
-  );
-}
+import Login from "./components/login.component/Login.jsx";
+const App = () => <Login />;
 
 export default App;
