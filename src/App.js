@@ -1,5 +1,12 @@
 import "./App.css";
-import Login from "./components/login.component/Login.jsx";
-const App = () => <Login />;
+import { Header } from "./components/header.component/Header";
+import Login from "./pages/Login/Login";
+
+const App = () => (
+  <>
+    <Header />
+    <Login />
+  </>
+);
 
 export default App;
