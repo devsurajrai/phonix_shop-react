@@ -28,7 +28,7 @@ const LoginMain = () => (
         </label>
 
         <label className=" text-sm lh-md login-label flex-r flex-center" for="">
-          <input className="input-checkbox m-r-s" type="checkbox" />{" "}
+          <input className="input-checkbox m-r-s" type="checkbox" />
           <span className="text-sm m-r-xl">Keep me logged in</span>
           <a className="forget-pass" href="">
             Forget Your Password?
