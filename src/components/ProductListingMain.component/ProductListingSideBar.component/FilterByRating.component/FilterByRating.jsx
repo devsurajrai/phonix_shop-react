@@ -11,9 +11,9 @@ const FilterByRating = () => {
     <div>
       <h4>Ratings</h4>
       {filterByRating.map((item) => (
-        <label class="flex-r align-items-center">
-          <input class="m-r-s" name="rating" type="checkbox" />
-          <span class="text-sm">{item}</span>
+        <label className="flex-r align-items-center">
+          <input className="m-r-s" name="rating" type="checkbox" />
+          <span className="text-sm">{item}</span>
         </label>
       ))}
     </div>

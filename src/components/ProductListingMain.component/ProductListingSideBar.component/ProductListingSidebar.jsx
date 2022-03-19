@@ -8,8 +8,8 @@ import SortByAlphabet from "./SortByAlphabet.component/SortByAlphabet";
 const ProductListingSidebar = () => {
   return (
     <aside className="product-list-sidebar p-lr-md ">
-      <h4 class="flex-r flex-sb">
-        Filter <span class="fw-l ">Clear</span>
+      <h4 className="flex-r flex-sb">
+        Filter <span className="fw-l ">Clear</span>
       </h4>
       <FilterByCategory />
       <FilterByPrice />

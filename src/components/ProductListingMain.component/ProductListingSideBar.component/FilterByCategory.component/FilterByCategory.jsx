@@ -12,9 +12,9 @@ const FilterByCategory = () => {
     <div>
       <h4>Categories</h4>
       {categories.map((category) => (
-        <label class="flex-r align-items-center" for="">
-          <input class="m-r-s" type="checkbox" />
-          <span class="text-sm">{category.name}</span>
+        <label className="flex-r align-items-center" for="">
+          <input className="m-r-s" type="checkbox" />
+          <span className="text-sm">{category.name}</span>
         </label>
       ))}
     </div>
