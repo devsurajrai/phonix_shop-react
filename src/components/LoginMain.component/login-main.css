@@ -6,7 +6,7 @@
   max-height: 100vh;
 }
 /* MAIN  */
-main {
+.login-main {
   display: grid;
   grid-template-rows: 1fr;
   place-content: center;

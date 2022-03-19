@@ -1,5 +1,4 @@
-import HomeMain from "../components/Home.component/HomeMain";
-
+import HomeMain from "../components/HomeMain.component/HomeMain";
 const Home = () => {
   return (
     <div>
