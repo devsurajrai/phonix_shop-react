@@ -1,0 +1,25 @@
+/* card  */
+.card {
+    height: unset;
+  }
+  .card:hover {
+    transform: unset;
+    cursor: pointer;
+  }
+  /* card quantity control button  */
+  .qty-btn {
+    margin: 1rem;
+    font-size: 2rem;
+    width: 1.2em;
+    border: none;
+    border-radius: 50%;
+  }
+  .qty-input {
+    width: 2rem;
+    text-align: center;
+  }
+  .qty-input::-webkit-outer-spin-button,
+  .qty-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }

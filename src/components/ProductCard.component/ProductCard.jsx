@@ -1,9 +1,9 @@
-import React from "react";
+import "./product-card.css";
 
 const ProductCard = () => {
   return (
-    <div className="card card--shadow position-r  text-sm txt-algn">
-      <div className="badge card-badge heart-badge-active position-a br-md color-white">
+    <div className="card card--shadow position-r  text-sm txt-algn br-md">
+      <div className="badge card-badge  position-a br-md color-white">
         <i className="fas fa-heart"></i>
       </div>
       <div className="card__img">
