@@ -5,6 +5,8 @@ import FilterByPrice from "./FilterByPrice.component/FilterByPrice";
 import FilterByRating from "./FilterByRating.component/FilterByRating";
 import SortByPrice from "./SortByPrice.component/SortByPrice";
 import SortByAlphabet from "./SortByAlphabet.component/SortByAlphabet";
+import FilterByDelivery from "./FilterByDelivery.component/FilterByDelivery";
+import FilterByStock from "./FilterByStock.component/FilterByStock";
 const ProductListingSidebar = () => {
   return (
     <aside className="product-list-sidebar p-lr-md ">
@@ -13,6 +15,8 @@ const ProductListingSidebar = () => {
       </h4>
       <FilterByCategory />
       <FilterByPrice />
+      <FilterByDelivery />
+      <FilterByStock />
       <FilterByRating />
       <SortByPrice />
       <SortByAlphabet />
