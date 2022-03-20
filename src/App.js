@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import ProductListing from "./pages/ProductListing";
 import { SignUp } from "./pages/SignUp";
 import Cart from "./pages/Cart";
+import Wishlist from "./pages/Wishlist";
 
 const App = () => (
   <div className="e-commerce-app-container">
@@ -14,7 +15,8 @@ const App = () => (
     {/* <SignUp /> */}
     {/* <Home /> */}
     {/* <ProductListing /> */}
-    <Cart />
+    {/* <Cart /> */}
+    <Wishlist />
   </div>
 );
 
