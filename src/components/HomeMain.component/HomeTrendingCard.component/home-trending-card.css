@@ -1,0 +1,14 @@
+
+:root {
+    --color-white: #ffffff;
+  }
+
+  /* card of latest item section  */
+  .latest-item-card {
+    background-color: var(--color-white);
+    width: calc(100% - 3rem);
+  }
+
+  .card__body h3 {
+    margin: 0;
+  }

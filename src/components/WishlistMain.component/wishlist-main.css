@@ -1,0 +1,6 @@
+.wishlist-items {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    place-items: center;
+    gap: 3rem;
+  }

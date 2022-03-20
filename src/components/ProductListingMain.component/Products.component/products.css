@@ -1,0 +1,14 @@
+.products-list-items {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    place-items: center;
+column-gap:3rem;
+row-gap:3rem;
+overflow-Y:scroll;
+
+  }
+  .products-list-items > h4 {
+    grid-column: 1/-1;
+    margin: 0px;
+    justify-self: left;
+  }

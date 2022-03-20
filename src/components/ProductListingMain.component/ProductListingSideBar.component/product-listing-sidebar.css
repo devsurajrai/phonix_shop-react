@@ -1,0 +1,26 @@
+/* Sidebar  */
+.product-list-sidebar {
+    background-color: white;
+    box-shadow: 0.5px 0px 5px 0.1px;
+    overflow-y: scroll;
+  }
+  .product-list-sidebar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .product-list-sidebar > h4 > span {
+    text-decoration: underline;
+    color: black;
+  }
+  .product-list-sidebar > h4 > span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  /* Slider  */
+.slider p {
+    margin: 0;
+  }
+  .slider > input:focus {
+    background-color: grey;
+    outline: none;
+  }
