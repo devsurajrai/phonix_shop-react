@@ -1,0 +1,31 @@
+/* @import url(https://ui-phoenix.netlify.app/main.css); */
+:root {
+    --color-white: #ffffff;
+  }
+  /* cards of categories  */
+  .cat-card {
+    /* position  */
+    position: relative;
+    /* styling */
+    background-color: var(--color-white);
+    /* box model */
+    max-height: 14vh;
+    width: 100%;
+  }
+  .cat-card-btn {
+    /* position  */
+    position: absolute;
+    left: 0;
+    top: 35%;
+    /* style  */
+    background-color: var(--background);
+    color: var(--dark);
+    /* box-model  */
+    width: 100%;
+    border-radius: 0px;
+  }
+  .cat-card-btn:hover {
+    /* style  */
+    color: var(--primary);
+  }
+

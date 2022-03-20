@@ -1,12 +1,4 @@
-@import url(https://ui-phoenix.netlify.app/main.css);
-:root {
-  --color-white: #ffffff;
-  --color-text: #0c5460;
-}
-body {
-  color: var(--color-text);
-  min-height: 100vh;
-}
+
 /* LOGIN PAGE  */
 .login-page {
   display: grid;
@@ -15,12 +7,11 @@ body {
 }
 /* MAIN  */
 main {
-  display: flex;
+  display: grid;
   grid-template-rows: 1fr;
   place-content: center;
   place-items: center;
   height:calc(100vh - 6rem)
-
 }
 /* FORM OF MAIN */
 
