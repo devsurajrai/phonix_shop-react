@@ -1,9 +1,11 @@
 
 /* LOGIN PAGE  */
-.login-page {
+.signup-page {
   display: grid;
   grid-template-rows: minmax(10%, max-content) 96vh;
   max-height: 100vh;
+  place-content: center;
+  overflow-y: scroll;
 }
 
 /* FORM OF MAIN */
@@ -13,6 +15,7 @@
   width: 30vw;
   max-height: 50rem;
   background-color: var(--color-white);
+  z-index: 1;
 }
 
 /* login form labels  */

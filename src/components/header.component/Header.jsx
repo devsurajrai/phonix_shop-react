@@ -1,14 +1,13 @@
 import "./header.css";
+import { Link } from "react-router-dom";
 export const Header = () => (
   <header className="nav-header  nav-header--e-comm nav--e-comm-bg  w-p-full">
     <nav className="nav nav--e-comm  nav--e-comm-bg flex-r flex-s flex-sp-eve ">
       {/* <!-- Brand Name  --> */}
-      <a
-        className=" brand-name--e-comm text-md m-lr-md "
-        href="../../index.html"
-      >
+      <Link to="/" className=" brand-name--e-comm text-md m-lr-md ">
         PHOENIX<sub>SHOP</sub>
-      </a>
+      </Link>
+
       {/* <!-- Search Field  --> */}
       <label className="nav-search flex-r br-md p-xs ">
         <img
@@ -24,20 +23,19 @@ export const Header = () => (
       {/* <!-- RHS Icons  --> */}
       <ul className="nav-menu__items flex-r flex-center">
         <li>
-          <button className="button button--secondary login-btn">
-            <a href="./log-in.html">Login</a>
-          </button>
+          <Link to="/login">
+            <button className="button button--secondary login-btn">
+              Login
+            </button>
+          </Link>
         </li>
         <li>
-          <a
-            className="color-white text-sm"
-            href="../product-listing/product-listing.html"
-          >
-            SHOP NOW{" "}
-          </a>
+          <Link to="/products" className="color-white text-sm">
+            SHOP NOW
+          </Link>
         </li>
         <li className="nav-icon position-r">
-          <a href="../wishlist/wishlist.html">
+          <Link to="/wishlist">
             <img
               className="img-100 cursor-pr"
               src="https://ui-phoenix.netlify.app/Assets/svg/navigation/heart-hollow.svg"
@@ -46,10 +44,10 @@ export const Header = () => (
             <span className="badge icon-badge nav-icon-badge  position-a br-xl color-white">
               0
             </span>
-          </a>
+          </Link>
         </li>
         <li className="nav-icon position-r flex-r ">
-          <a href="../cart/cart.html">
+          <Link to="/cart">
             <img
               className="img-100 p-r-xs cursor-pr"
               src="https://ui-phoenix.netlify.app/Assets/svg/navigation/cart.svg"
@@ -58,7 +56,7 @@ export const Header = () => (
             <span className="badge icon-badge nav-icon-badge  position-a br-xl color-white">
               0
             </span>
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
