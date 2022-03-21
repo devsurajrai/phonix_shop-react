@@ -1,0 +1,38 @@
+/* SHARED CLASSES  */
+.align-self-start {
+    align-self: flex-end;
+  }
+  .align-items-center {
+    align-items: center;
+  }
+  .color-grey {
+    color: grey;
+  }
+  /* CART ITEMS AND PRICE DETAILS CONTAINER  */
+.cart-and-price {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+    padding: 3rem;
+    gap: 3rem;
+    align-items: center;
+    justify-items: center;
+  }
+
+  /* Cart Items  */
+  .cart-items {
+    display: grid;
+    row-gap: 3rem;
+    overflow-y: scroll;
+    justify-self: right;
+    max-height: calc(100vh - 6rem);
+    padding: 3rem;
+  }
+  .cart-items::-webkit-scrollbar {
+    display: none;
+  }
+  /* price details  */
+.cart-items-price-details {
+    background-color: white;
+    padding: 3rem;
+  }
