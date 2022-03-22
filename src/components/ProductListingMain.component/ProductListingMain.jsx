@@ -4,7 +4,7 @@ import Products from "./Products.component/Products";
 import { useFetchedData } from "../../customHooks/useFetchedData";
 
 const ProductListingMain = () => {
-  const backendProductData = useFetchedData();
+  const { backendProductData } = useFetchedData();
 
   return (
     <main className="product-listing-main">
