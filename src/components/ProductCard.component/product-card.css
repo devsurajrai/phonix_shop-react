@@ -16,6 +16,11 @@
     font-size: 2em;
     color: white;
   }
+
+.delivery-rating{
+justify-content:space-between;
+align-items:center;
+  }
   .rating{
 display:flex;
 justify-content:right;

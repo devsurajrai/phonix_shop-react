@@ -1,16 +1,37 @@
 import React from "react";
 
-const SortByPrice = () => {
-  const sortByPrice = ["Price - High to Low", "Price - Low to High"];
+const SortByPrice = ({ filterSortStateDispatch }) => {
   return (
     <div>
       <h4>Sort</h4>
-      {sortByPrice.map((item) => (
-        <label className="flex-r align-items-center">
-          <input className="m-r-s" name="price-sort" type="radio" />
-          <span className="text-sm">{item}</span>
-        </label>
-      ))}
+      <label className="flex-r align-items-center">
+        <input
+          className="m-r-s"
+          name="sort"
+          type="radio"
+          onChange={() =>
+            filterSortStateDispatch({
+              type: "SORT_BY_PRICE",
+              value: "HIGH_TO_LOW",
+            })
+          }
+        />
+        <span className="text-sm">Price - High to Low</span>
+      </label>
+      <label className="flex-r align-items-center">
+        <input
+          className="m-r-s"
+          name="sort"
+          type="radio"
+          onChange={() =>
+            filterSortStateDispatch({
+              type: "SORT_BY_PRICE",
+              value: "LOW_TO_HIGH",
+            })
+          }
+        />
+        <span className="text-sm">Price - Low to High</span>
+      </label>
     </div>
   );
 };

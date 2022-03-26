@@ -8,7 +8,7 @@ const ProductListingMain = () => {
 
   return (
     <main className="product-listing-main">
-      <ProductListingSidebar backendProductData={backendProductData} />
+      <ProductListingSidebar />
       <Products backendProductData={backendProductData} />
     </main>
   );
