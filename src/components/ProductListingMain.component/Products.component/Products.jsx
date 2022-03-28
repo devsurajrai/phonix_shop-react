@@ -5,6 +5,7 @@ import { useFilterSortContext } from "../../../contexts/contextSortFilter";
 import { getFilteredSortedProdData } from "../../../utils/filterSort/filterSortCompose";
 import { useSearchParams } from "react-router-dom";
 import { homeCategoryProductDataFilter } from "../../../utils/homeCategoryProductDataFilter";
+import { addCartWishList } from "../../../utils/cartWishlist/addCartWishlist";
 
 const Products = ({ backendProductData }) => {
   const { filterSortState } = useFilterSortContext();
@@ -14,14 +15,12 @@ const Products = ({ backendProductData }) => {
   const categoryFromHomepage = getCategoryFromHomepage.get("category");
 
   //filtering the data if the user selects any category from the homepage
-  console.log(finalProductData, categoryFromHomepage);
 
   finalProductData = homeCategoryProductDataFilter(
     finalProductData,
     categoryFromHomepage
   );
 
-  console.log(finalProductData);
   return (
     <div className="products-list-items p-md">
       <h4>
@@ -31,9 +30,26 @@ const Products = ({ backendProductData }) => {
         </span>
       </h4>
       {finalProductData &&
-        finalProductData.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+        finalProductData.map((product) => {
+          let productCardData = {
+            brandName: product.itemDetails.brand,
+            productName: product.itemDetails.name,
+            priceWithoutDiscount: product.itemDetails.price,
+            discountOnProduct: product.itemDetails.discountInPercent,
+            productIMG: product.itemDetails.imageURL,
+            productRating: product.ratings,
+            productDelivery: product.itemStatus.fastDelivery,
+            outOfStock: !product.itemStatus.inStock,
+          };
+          return (
+            <ProductCard
+              key={product.id}
+              productCardData={productCardData}
+              product={product}
+              addCartWishList={addCartWishList}
+            />
+          );
+        })}
     </div>
   );
 };

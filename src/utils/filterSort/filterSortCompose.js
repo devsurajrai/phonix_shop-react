@@ -17,7 +17,6 @@ const getFilteredSortedProdData = composefilterSort(
   filterByRating,
   sort
 );
-console.log(getFilteredSortedProdData);
 
 export { getFilteredSortedProdData };
 
