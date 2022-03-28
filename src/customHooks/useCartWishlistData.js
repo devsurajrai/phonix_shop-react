@@ -35,7 +35,7 @@ const reducer = (cartWishlistState, action) => {
         "REMOVE_FROM_WISHLIST"
       );
     case "MOVE_TO_WISHLIST":
-      return moveWishlist(cartWishlistState, cartWishlistState, value);
+      return moveWishlist(cartWishlistState, value);
     case "INCREMENT_PRODUCT_QTY":
       return increaseDecreaseQty(value, cartWishlistState, "INCREMENT");
     case "DECREMENT_PRODUCT_QTY":
