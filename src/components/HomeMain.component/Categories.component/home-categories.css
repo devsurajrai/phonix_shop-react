@@ -1,4 +1,4 @@
-/* @import url(https://ui-phoenix.netlify.app/main.css); */
+
 :root {
     --color-white: #ffffff;
   }
@@ -26,6 +26,6 @@
   }
   .cat-card-btn:hover {
     /* style  */
-    color: var(--primary);
+    color: var(--secondary);
   }
 
