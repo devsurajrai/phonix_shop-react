@@ -8,9 +8,8 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "racquet",
-    categoryImgUrl:
-      "https://shop-phoenix.netlify.app/Assets/images/racquet.png",
+    categoryName: "racket",
+    categoryImgUrl: "https://shop-phoenix.netlify.app/Assets/images/racket.png",
   },
   {
     _id: uuid(),
