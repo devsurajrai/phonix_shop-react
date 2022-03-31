@@ -4,7 +4,6 @@
   display: grid;
   grid-template-rows: minmax(10%, max-content) 96vh;
   max-height: 100vh;
-
 }
 /* MAIN  */
 .login-main {
@@ -64,7 +63,4 @@
   border: none;
   background-color: var(--color-white);
   color: var(--color-text);
-}
-.create-new-acc:hover {
-cursor: pointer;
 }

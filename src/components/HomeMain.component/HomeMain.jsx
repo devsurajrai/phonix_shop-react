@@ -3,19 +3,15 @@ import HomeCategories from "./Categories.component/HomeCategories";
 import Hero from "./Hero.component/Hero";
 import HomeTrendingCard from "./HomeTrendingCard.component/HomeTrendingCard";
 import "./home-main.css";
-import { useFetchedData } from "../../customHooks/useFetchedData";
 const HomeMain = () => {
-  const { backendCategoryData } = useFetchedData();
-  const categoryData =
-    backendCategoryData && backendCategoryData.data.categories;
-
   return (
     <main className="home-main">
       <section className="categories">
-        {backendCategoryData &&
-          categoryData.map((category) => (
-            <HomeCategories key={category.id} category={category} />
-          ))}
+        <HomeCategories />
+        <HomeCategories />
+        <HomeCategories />
+        <HomeCategories />
+        <HomeCategories />
       </section>
       <section className="hero br-sm">
         <Hero />

@@ -36,10 +36,3 @@
     background-color: white;
     padding: 3rem;
   }
-
-  /* Empty Cart  */
-  .empty-cart{
-    display: flex;
-    justify-content:center;
-    align-items:center;
-  }

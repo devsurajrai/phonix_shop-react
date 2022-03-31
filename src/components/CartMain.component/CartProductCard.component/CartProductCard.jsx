@@ -1,94 +1,38 @@
-import { useCartWishlistContext } from "../../../contexts/contextCartWishlist";
-import { increaseDecreaseQty } from "../../../utils/cartWishlist/increseDecreaseQty";
-import { getPriceWithDiscount } from "../../../utils/getPriceWithDiscount";
-
 import "./cart-product-component.css";
-const CartProductCard = ({ product, cartItems }) => {
-  const productIMG = product.item.itemDetails.imageURL;
-  const productName = product.item.itemDetails.name;
-  const priceWithoutDiscount = Math.floor(product.item.itemDetails.price);
-  const discountOnProduct = product.item.itemDetails.discountInPercent;
-  const priceWithDiscount = getPriceWithDiscount(
-    priceWithoutDiscount,
-    discountOnProduct
-  );
-  const productQuantity = product.quantity;
-  const { cartWishlistStateDispatch } = useCartWishlistContext();
+const CartProductCard = () => {
   return (
-    <div className="card card-horizontal position-r  flex-r text-sm  p-l br-sm">
-      <div className="card-hor-img">
-        <img className="img-100" src={productIMG} alt="badminton-racket" />
+    <div class="card card-horizontal position-r  flex-r text-sm  p-l br-sm">
+      <div class="card-hor-img">
+        <img
+          class="img-100"
+          src="https://ui-phoenix.netlify.app/Assets/images/badminton.jpg"
+          alt="badminton-racket"
+        />
       </div>
-      <div className="hor-card__body-footer flex-c flex-sb m-l-md">
-        <div className="card__body flex-c">
+      <div class="hor-card__body-footer flex-c flex-sb">
+        <div class="card__body flex-c">
           <div>
-            <p className="card__body-desc">{productName}</p>
+            <p class="card__body-desc">Yonex Astrox 88D Racket</p>
             <div>
-              <div className="flex-r align-items-center">
-                <h3 className="card__body-amt flex-r flex-sb">
-                  ₹ {priceWithDiscount}
-                </h3>
-                <span className="text-sm m-l-s color-grey">
-                  <strike>₹ {priceWithoutDiscount}</strike>
+              <div class="flex-r align-items-center">
+                <h3 class="card__body-amt flex-r flex-sb">₹ 1000 </h3>
+                <span class="text-sm m-l-s color-grey">
+                  <strike>₹ 2000</strike>
                 </span>
               </div>
             </div>
-            <span className="text-sm fw-b color-grey ">
-              {discountOnProduct}% Off
-            </span>
-            <div className="flex-r align-items-center m-b-xs">
-              <span>Quantity:</span>{" "}
-              <button
-                className="qty-btn"
-                onClick={() =>
-                  cartWishlistStateDispatch({
-                    type: "DECREMENT_PRODUCT_QTY",
-                    value: product,
-                  })
-                }
-              >
-                -
-              </button>
-              <input
-                className="qty-input"
-                type="number"
-                value={productQuantity}
-                readonly
-              />
-              <button
-                className="qty-btn"
-                onClick={() =>
-                  cartWishlistStateDispatch({
-                    type: "INCREMENT_PRODUCT_QTY",
-                    value: product,
-                  })
-                }
-              >
-                +
-              </button>
+            <span class="text-sm fw-b color-grey ">50% Off</span>
+            <div class="flex-r align-items-center m-b-xs">
+              <span>Quantity:</span> <button class="qty-btn">-</button>
+              <input class="qty-input" type="number" value="1" readonly />
+              <button class="qty-btn">+</button>
             </div>
           </div>
         </div>
-        <button
-          className="button button--primary btn-sm  card__footer-btn m-b-s"
-          onClick={() =>
-            cartWishlistStateDispatch({
-              type: "REMOVE_FROM_CART",
-              value: product,
-            })
-          }
-        >
+        <button class="button button--primary btn-sm  card__footer-btn m-b-s">
           Remove from Cart
         </button>
-        <button
-          className="button outline-button-primary btn-sm  card__footer-btn "
-          onClick={() =>
-            cartWishlistStateDispatch({
-              type: "MOVE_TO_WISHLIST",
-              value: product,
-            })
-          }
-        >
+        <button class="button outline-button-primary btn-sm  card__footer-btn ">
           Move to Wishlist
         </button>
       </div>
