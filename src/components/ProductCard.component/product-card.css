@@ -39,3 +39,8 @@ color:var(--secondary);
     top:0;
     left:0;
   }
+
+  /* button disabled  */
+  .disabled{
+    background-color:darkgray;
+  }

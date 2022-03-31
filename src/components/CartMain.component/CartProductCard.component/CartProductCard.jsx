@@ -1,9 +1,8 @@
 import { useCartWishlistContext } from "../../../contexts/contextCartWishlist";
-import { increaseDecreaseQty } from "../../../utils/cartWishlist/increseDecreaseQty";
 import { getPriceWithDiscount } from "../../../utils/getPriceWithDiscount";
 
 import "./cart-product-component.css";
-const CartProductCard = ({ product, cartItems }) => {
+const CartProductCard = ({ product }) => {
   const productIMG = product.item.itemDetails.imageURL;
   const productName = product.item.itemDetails.name;
   const priceWithoutDiscount = Math.floor(product.item.itemDetails.price);

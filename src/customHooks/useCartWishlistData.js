@@ -50,7 +50,7 @@ export const useCartWishlistData = () => {
     reducer,
     INITIAL_CART_WISHLIST_DATA
   );
-
+  console.log(cartWishlistState);
   addCartWishlistLocalStorage(cartWishlistState, INITIAL_CART_WISHLIST_DATA);
 
   return { cartWishlistState, cartWishlistStateDispatch };
