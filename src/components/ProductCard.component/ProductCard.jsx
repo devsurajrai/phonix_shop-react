@@ -27,7 +27,7 @@ const ProductCard = ({
   return (
     <div className="card card--shadow position-r  text-sm txt-algn br-md p-md">
       {outOfStock && (
-        <div class="card__text-overlay position-a flex-r flex-center br-md ">
+        <div class="card__text-overlay position-a flex-r flex-center br-md abc">
           <h2>Out of Stock</h2>
         </div>
       )}

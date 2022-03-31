@@ -11,11 +11,7 @@ export const checkCartWishlistItem = (
         if (cartWishlistData.item._id === currentDispatchValue._id) {
           foundItem = true;
           if (!cartWishlistData.inCart) {
-            if (!cartWishlistData.inWishlist) {
-              return { ...cartWishlistData, inCart: true };
-            } else {
-              return { ...cartWishlistData, inCart: true, inWishlist: false };
-            }
+            return { ...cartWishlistData, inCart: true };
           } else {
             return {
               ...cartWishlistData,
@@ -56,14 +52,12 @@ export const checkCartWishlistItem = (
         if (cartWishlistData.item._id === currentDispatchValue._id) {
           foundItem = true;
           if (!cartWishlistData.inWishlist) {
-            if (cartWishlistData.inCart) {
-              return {
-                ...cartWishlistData,
-                quantity: cartWishlistData.quantity + 1,
-              };
-            } else {
-              return { ...cartWishlistData, inWishlist: true };
-            }
+            return { ...cartWishlistData, inWishlist: true };
+          } else {
+            return {
+              ...cartWishlistData,
+              quantity: cartWishlistData.quantity + 1,
+            };
           }
         }
         return cartWishlistData;
