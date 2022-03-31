@@ -1,11 +1,10 @@
 import React from "react";
 
-const SortByPrice = () => {
-  const sortByPrice = ["Price - High to Low", "Price - Low to High"];
+const SortByAlphabet = () => {
+  const sortByAlphabet = [" Albhabet: A-Z", " Alphabet: Z-A"];
   return (
     <div>
-      <h4>Sort</h4>
-      {sortByPrice.map((item) => (
+      {sortByAlphabet.map((item) => (
         <label className="flex-r align-items-center">
           <input className="m-r-s" name="price-sort" type="radio" />
           <span className="text-sm">{item}</span>
@@ -15,4 +14,4 @@ const SortByPrice = () => {
   );
 };
 
-export default SortByPrice;
+export default SortByAlphabet;

@@ -1,7 +1,6 @@
 import "./signup-main.css";
-import { Link } from "react-router-dom";
 export const SignUpMain = () => (
-  <div className="signup-page">
+  <div className="login-page">
     <main>
       <form
         className="log-in-form sign-up-form p-xxl flex-c flex-center br-sm"
@@ -56,12 +55,12 @@ export const SignUpMain = () => (
         <button className="button button--secondary log-in-btn m-tb-md">
           Sign Up
         </button>
-        <Link to="/login" className=" text-sm">
-          <button className="create-new-acc flex-r flex-center">
+        <button className="create-new-acc flex-r flex-center">
+          <a className=" text-sm" href="../log-in/log-in.html">
             Already have an account
-            <span className="text-md p-l-xs"> > </span>
-          </button>
-        </Link>
+          </a>
+          <span className="text-md p-l-xs"> > </span>
+        </button>
       </form>
     </main>
   </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const FilterByPrice = ({ filterSortState, filterSortStateDispatch }) => {
+const FilterByPrice = () => {
   return (
     <div>
       <h4>Price</h4>
@@ -13,15 +13,9 @@ const FilterByPrice = ({ filterSortState, filterSortStateDispatch }) => {
         <input
           className="w-p-full"
           type="range"
-          min="500"
-          max="10000"
-          value={filterSortState.price}
-          onChange={(event) =>
-            filterSortStateDispatch({
-              type: "FILTER_BY_PRICE",
-              value: event.target.value,
-            })
-          }
+          min="50"
+          max="250"
+          value="150"
         />
       </label>
     </div>
