@@ -9,7 +9,8 @@ export const categories = [
   {
     _id: uuid(),
     categoryName: "racket",
-    categoryImgUrl: "https://shop-phoenix.netlify.app/Assets/images/racket.png",
+    categoryImgUrl:
+      "https://shop-phoenix.netlify.app/Assets/images/racquet.png",
   },
   {
     _id: uuid(),
