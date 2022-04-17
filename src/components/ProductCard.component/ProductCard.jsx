@@ -1,28 +1,60 @@
+import { useCartWishlistContext } from "../../contexts/contextCartWishlist";
 import { getPriceWithDiscount } from "../../utils/getPriceWithDiscount";
 import "./product-card.css";
+import { useState } from "react";
 
-const ProductCard = ({ product }) => {
-  const brandName = product.itemDetails.brand;
-  const productName = product.itemDetails.name;
-  const priceWithoutDiscount = product.itemDetails.price;
-  const discountOnProduct = product.itemDetails.discountInPercent;
+const ProductCard = ({
+  productCardData,
+  product,
+  addCartWishList,
+  wishlist,
+}) => {
+  const [isAddedToWishlist, setIsAddedToWishlist] = useState(false);
+  const [isAddedToCart, setIsAddedToCart] = useState(false);
+  const { cartWishlistStateDispatch } = useCartWishlistContext();
+  const {
+    brandName,
+    productName,
+    priceWithoutDiscount,
+    discountOnProduct,
+    productIMG,
+    productRating,
+    productDelivery,
+    outOfStock,
+  } = productCardData;
   const priceWithDiscount = getPriceWithDiscount(
     priceWithoutDiscount,
     discountOnProduct
   );
-  const productIMG = product.itemDetails.imageURL;
-  const productRating = product.ratings;
-  const productDelivery = product.itemStatus.fastDelivery;
-  const outOfStock = !product.itemStatus.inStock;
+
+  const addToWishist = () => {
+    if (!isAddedToWishlist) {
+      addCartWishList(product, "WISHLIST", cartWishlistStateDispatch);
+      setIsAddedToWishlist(true);
+    } else {
+      cartWishlistStateDispatch({
+        type: "REMOVE_FROM_WISHLIST",
+        value: product,
+      });
+      setIsAddedToWishlist(false);
+    }
+  };
 
   return (
-    <div className="card card--shadow position-r  text-sm txt-algn br-md">
+    <div className="card card--shadow position-r  text-sm txt-algn br-md p-md">
       {outOfStock && (
-        <div class="card__text-overlay position-a flex-r flex-center br-md ">
+        <div class="card__text-overlay position-a flex-r flex-center br-md abc">
           <h2>Out of Stock</h2>
         </div>
       )}
-      <div className="badge card-badge  position-a br-md color-white">
+      <div
+        className={`${
+          wishlist === "wishlist" || isAddedToWishlist
+            ? "heart-badge-active"
+            : ""
+        } badge card-badge  position-a br-md color-white`}
+        onClick={wishlist !== "wishlist" ? () => addToWishist(product) : ""}
+      >
         <i className="fas fa-heart"></i>
       </div>
       <div className="card__img">
@@ -58,9 +90,29 @@ const ProductCard = ({ product }) => {
         </div>
       </div>
 
-      <button className="button button--primary no-br card__footer-btn  ">
+      <button
+        className={`button button--primary no-br card__footer-btn ${
+          isAddedToCart && "disabled"
+        }`}
+        onClick={() =>
+          addCartWishList(product, "CART", cartWishlistStateDispatch)
+        }
+      >
         Add to Cart
       </button>
+      {wishlist === "wishlist" && (
+        <button
+          className="button button--primary no-br card__footer-btn m-t-md"
+          onClick={() =>
+            cartWishlistStateDispatch({
+              type: "REMOVE_FROM_WISHLIST",
+              value: product,
+            })
+          }
+        >
+          Remove from wishlist
+        </button>
+      )}
     </div>
   );
 };

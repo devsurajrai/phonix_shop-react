@@ -33,3 +33,14 @@ color:var(--secondary);
     font-size: 2em;
     color: red;
   }
+
+/*out of stock */
+  .card__text-overlay{
+    top:0;
+    left:0;
+  }
+
+  /* button disabled  */
+  .disabled{
+    background-color:darkgray;
+  }
