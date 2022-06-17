@@ -5,5 +5,5 @@
 }
 .e-commerce-app-container{
   color: var(--color-text);
-  min-height: 100vh;
+height: 100vh;
 }

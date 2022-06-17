@@ -2,7 +2,9 @@
 .product-list-sidebar {
     background-color: white;
     box-shadow: 0.5px 0px 5px 0.1px;
-    overflow-y: scroll;
+    overflow:scroll;
+    height:90vh;
+    padding-bottom:2rem
   }
   .product-list-sidebar::-webkit-scrollbar {
     display: none;

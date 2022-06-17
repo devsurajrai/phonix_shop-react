@@ -8,10 +8,10 @@
 
 .product-listing-main{
     display: grid;
-    max-height: calc(100vh - 6rem);
+    height: calc(100vh - 6rem);
     grid-template-columns: minmax(0, 1fr) minmax(0, 5fr);
     grid-template-rows: repeat(minmax(0, 1fr));
     grid-column-gap: 1rem;
 
-    /* overflow-y:hidden; */
+    overflow-y:hidden;
   }

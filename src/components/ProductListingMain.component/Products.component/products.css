@@ -1,10 +1,11 @@
 .products-list-items {
     display: grid;
+    height:85vh;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     place-items: center;
 column-gap:3rem;
 row-gap:3rem;
-overflow-Y:scroll;
+overflow:scroll
 
   }
   .products-list-items > h4 {
